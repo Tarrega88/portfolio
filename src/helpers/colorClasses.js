@@ -1,23 +1,23 @@
-const colorData = {
-  night: {
-    bg: { text: "bg", num: 800 },
-    text: { text: "text", num: 100 },
-    textHover: { text: "hover:text", num: 400 },
-    textActive: { text: "active:text", num: 500 },
-    icon: { text: "text", num: 200 },
-    iconActive: { text: "text", num: 500 },
-    svg: { text: "fill", num: 100 },
-  },
-  day: {
-    bg: { text: "bg", num: 50 },
-    text: { text: "text", num: 800 },
-    textHover: { text: "hover:text", num: 500 },
-    textActive: { text: "active:text", num: 400 },
-    icon: { text: "text", num: 800 },
-    iconActive: { text: "text", num: 400 },
-    svg: { text: "fill", num: 800 },
-  },
-};
+// const colorData = {
+//   night: {
+//     bg: { text: "bg", num: 800 },
+//     text: { text: "text", num: 100 },
+//     textHover: { text: "hover:text", num: 400 },
+//     textActive: { text: "active:text", num: 500 },
+//     icon: { text: "text", num: 200 },
+//     iconActive: { text: "text", num: 500 },
+//     svg: { text: "fill", num: 100 },
+//   },
+//   day: {
+//     bg: { text: "bg", num: 50 },
+//     text: { text: "text", num: 800 },
+//     textHover: { text: "hover:text", num: 500 },
+//     textActive: { text: "active:text", num: 400 },
+//     icon: { text: "text", num: 800 },
+//     iconActive: { text: "text", num: 400 },
+//     svg: { text: "fill", num: 800 },
+//   },
+// };
 
 const colorTypes = ["zinc", "slate", "stone"];
 
@@ -45,6 +45,8 @@ const colors = {
       text: "text-zinc-100",
       textHover: "hover:text-zinc-400",
       textActive: "active:text-zinc-500",
+      subText: "text-zinc-400",
+      subTextHover: "hover:text-zinc-300",
       iconActive: "text-zinc-200",
       icon: "text-zinc-500",
       svg: "fill-zinc-100",
@@ -52,9 +54,11 @@ const colors = {
     day: {
       bg: "bg-zinc-50",
       codeBg: "bg-zinc-300",
-      text: "text-zinc-800",
+      text: "text-zinc-950",
       textHover: "hover:text-zinc-500",
       textActive: "active:text-zinc-400",
+      subText: "text-zinc-500",
+      subTextHover: "hover:text-zinc-800",
       iconActive: "text-zinc-800",
       icon: "text-zinc-400",
       svg: "fill-zinc-800",
