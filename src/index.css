@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-custom;
+  /* font-family: "Montserrat"; */
+}
+
+@layer base {
+  @font-face {
+    font-family: "Archia";
+    src:
+      url("/fonts/archia/bold.archia-bold-webfont.woff2") format("woff2"),
+      url("/fonts/archia/bold.archia-bold-webfont.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Archia";
+    src:
+      url("/fonts/archia/thin/archia-thin-webfont.woff2") format("woff2"),
+      url("/fonts/archia/thin/archia-thin-webfont.woff") format("woff");
+    font-weight: 100; /* Thin */
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Archia";
+    src:
+      url("/fonts/archia/light/archia-light-webfont.woff2") format("woff2"),
+      url("/fonts/archia/light/archia-light-webfont.woff") format("woff");
+    font-weight: 300; /* Light */
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Archia";
+    src:
+      url("/fonts/archia/regular/archia-regular-webfont.woff2") format("woff2"),
+      url("/fonts/archia/regular/archia-regular-webfont.woff") format("woff");
+    font-weight: 400; /* Regular */
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Archia";
+    src:
+      url("/fonts/archia/medium/archia-medium-webfont.woff2") format("woff2"),
+      url("/fonts/archia/medium/archia-medium-webfont.woff") format("woff");
+    font-weight: 500; /* Medium */
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Archia";
+    src:
+      url("/fonts/archia/semibold/archia-semibold-webfont.woff2")
+        format("woff2"),
+      url("/fonts/archia/semibold/archia-semibold-webfont.woff") format("woff");
+    font-weight: 600; /* SemiBold */
+    font-style: normal;
+  }
+}
