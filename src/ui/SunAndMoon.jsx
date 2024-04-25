@@ -24,7 +24,7 @@ function SunAndMoon() {
   return (
     <div
       onClick={() => dispatch(setLightMode(oppositeMode))}
-      className={`absolute right-5 top-6 text-lg transition-transform duration-300 ${pathname === "/" ? "pointer-events-none translate-x-10" : ""}`}
+      className={`absolute top-6 text-lg transition-all ${pathname === "/" ? "pointer-events-none -right-full duration-1000" : "right-5 duration-100"}`}
     >
       {data[lightMode]}
     </div>

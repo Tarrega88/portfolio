@@ -11,11 +11,10 @@ export default function AppLayout() {
 
   return (
     <div
-      className={`flex min-h-dvh flex-col ${colors[colorMode][lightMode].text} ${colors[colorMode][lightMode].bg} transition-all duration-1000`}
+      className={`flex min-h-dvh flex-col ${colors[colorMode][lightMode].text} ${colors[colorMode][lightMode].bg} relative overflow-x-clip transition-all duration-1000`}
     >
       <SunAndMoon />
       <LogoTop />
-      {/* <div className="flex-grow px-4 pt-6"> */}
       <div className="flex-grow px-4">
         <Outlet />
       </div>
