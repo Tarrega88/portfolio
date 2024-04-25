@@ -1,5 +1,3 @@
-import SunAndMoon from "./SunAndMoon";
-
 function SectionTitle({ mainTitle, subTitle, emptySubTitle }) {
   return (
     <div
@@ -7,9 +5,6 @@ function SectionTitle({ mainTitle, subTitle, emptySubTitle }) {
     >
       <div className="flex flex-col">
         <h1 className="flex justify-end text-3xl uppercase">
-          {/* <span className="flex items-center pr-2 text-xl">
-            {<SunAndMoon />}
-          </span> */}
           {mainTitle}
         </h1>
         <h2
