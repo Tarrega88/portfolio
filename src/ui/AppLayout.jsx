@@ -1,17 +1,15 @@
 import { Outlet } from "react-router-dom";
 import DynamicNav from "./DynamicNav";
-import { useSelector } from "react-redux";
-import { colors } from "../helpers/colorClasses";
-import TopRight from "./TopRight";
 import LogoTop from "./LogoTop";
 import SunAndMoon from "./SunAndMoon";
+import useDynamicColor from "../hooks/useDynamicColor";
 
 export default function AppLayout() {
-  const { colorMode, lightMode } = useSelector((state) => state.ui);
+  const dynamicColor = useDynamicColor();
 
   return (
     <div
-      className={`flex min-h-dvh flex-col ${colors[colorMode][lightMode].text} ${colors[colorMode][lightMode].bg} relative overflow-x-clip transition-all duration-1000`}
+      className={`flex min-h-dvh flex-col ${dynamicColor.text} ${dynamicColor.bg} relative overflow-x-clip transition-all duration-1000`}
     >
       <SunAndMoon />
       <LogoTop />

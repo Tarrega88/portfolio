@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { colors } from "../helpers/colorClasses";
 import SunAndMoon from "./SunAndMoon";
+import useDynamicColor from "../hooks/useDynamicColor";
 
 function DynamicNav() {
   const dispatch = useDispatch();
@@ -15,29 +16,29 @@ function DynamicNav() {
   const handleShowNav = () => dispatch(toggleNav());
   const handleSetActivePage = (to) => dispatch(setActivePage(to));
 
+  const dynamicColor = useDynamicColor();
+
   /*Will need to make this map function dynamic to catch changes of orientation and width*/
   return (
-    <div className="">
+    <nav className="">
       <div className="flex justify-around">
         {navLinks.map((e) => (
           <div key={e.text} onClick={() => handleSetActivePage(e.text)}>
             <Link to={e.to}>
               <div
-                className={`flex justify-center text-[2rem] ${pathname === e.to ? colors[colorMode][lightMode].iconActive : colors[colorMode][lightMode].icon} transition-all duration-300`}
+                className={`flex flex-col justify-center text-[2rem] ${dynamicColor.iconHover} ${pathname === e.to ? dynamicColor.iconSelected : dynamicColor.icon} transition-all duration-300`}
               >
                 {/*looks like I may been getting this ready to be for the larger size screen? <div className="hidden">{e.text}</div> */}
-                <div> {<e.icon />}</div>
-              </div>
-              <div
-                className={`pt-1 ${pathname === e.to ? colors[colorMode][lightMode].iconActive : colors[colorMode][lightMode].icon} transition-all duration-300`}
-              >
-                {e.text}
+                <div className="flex justify-center"> {<e.icon />}</div>
+                <div className="flex select-none justify-center pt-1 text-base">
+                  {e.text}
+                </div>
               </div>
             </Link>
           </div>
         ))}
       </div>
-    </div>
+    </nav>
   );
 }
 

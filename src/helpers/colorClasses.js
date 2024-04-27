@@ -19,11 +19,10 @@
 //   },
 // };
 
-const colorTypes = ["zinc", "slate", "stone"];
+// const colorTypes = ["zinc", "slate", "stone"];
 
 // const colors = colorTypes.reduce((a, color) => {
 //   if (!a[color]) a[color] = {};
-//   // if (!a[color][key]) a[color][key] = {};
 //   Object.entries(colorData).forEach(
 //     ([lightMode, value]) => {
 //       if (!a[color][lightMode]) a[color][lightMode] = {};
@@ -32,7 +31,6 @@ const colorTypes = ["zinc", "slate", "stone"];
 //           (a[color][lightMode][key] = `${text}-${color}-${num}`),
 //       );
 //     },
-
 //   );
 //   return a;
 // }, {});
@@ -47,9 +45,13 @@ const colors = {
       textActive: "active:text-zinc-500",
       subText: "text-zinc-400",
       subTextHover: "hover:text-zinc-300",
-      iconActive: "text-zinc-200",
+      subTextSelected: "text-zinc-300",
       icon: "text-zinc-500",
+      iconSelected: "text-zinc-200",
+      iconHover: "hover:text-zinc-200",
+      lightModeHover: "hover:text-yellow-300",
       svg: "fill-zinc-100",
+      svgHover: "hover:fill-zinc-400",
     },
     day: {
       bg: "bg-zinc-50",
@@ -57,11 +59,15 @@ const colors = {
       text: "text-zinc-950",
       textHover: "hover:text-zinc-500",
       textActive: "active:text-zinc-400",
-      subText: "text-zinc-500",
-      subTextHover: "hover:text-zinc-800",
-      iconActive: "text-zinc-800",
+      subText: "text-zinc-600",
+      subTextHover: "hover:text-zinc-900",
+      subTextSelected: "text-zinc-900",
       icon: "text-zinc-400",
+      iconSelected: "text-zinc-900",
+      iconHover: "hover:text-zinc-900",
+      lightModeHover: "hover:text-yellow-400",
       svg: "fill-zinc-800",
+      svgHover: "hover:fill-zinc-600",
     },
   },
   // slate: {

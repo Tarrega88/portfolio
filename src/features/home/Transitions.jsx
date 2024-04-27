@@ -74,7 +74,7 @@ function Transitions() {
   }
 
   return (
-    <div>
+    <div className="cursor-pointer select-none">
       <div className="relative h-[100vw]">
         <div className="absolute">
           <video
