@@ -1,7 +1,4 @@
 function CodeBlock({ heading, text, intro, icon, current }) {
-  // console.log(text);
-  // console.log("here");
-  console.log(icon);
   const space = "\xa0";
   const actualText = text.replaceAll(" ", space);
   const textArr = actualText.split("\n");
