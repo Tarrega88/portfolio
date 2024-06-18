@@ -8,9 +8,6 @@ export default function AppLayout() {
   const dynamicColor = useDynamicColor();
 
   return (
-    // <div
-    //   className={`flex min-h-dvh flex-col ${dynamicColor.text} ${dynamicColor.bg} relative overflow-x-clip transition-all duration-1000`}
-    // >
     <div
       className={`flex h-dvh flex-col ${dynamicColor.text} ${dynamicColor.bg} relative overflow-x-clip transition-all duration-300`}
     >
