@@ -1,6 +1,4 @@
 import SectionTitle from "../../ui/SectionTitle";
-import Toggle from "../../ui/Toggle";
-import Icon from "../../ui/icons/Icon";
 import Transitions from "./Transitions";
 
 function Home() {

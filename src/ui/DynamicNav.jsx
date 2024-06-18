@@ -20,25 +20,27 @@ function DynamicNav() {
 
   /*Will need to make this map function dynamic to catch changes of orientation and width*/
   return (
-    <nav className="">
-      <div className="flex justify-around">
-        {navLinks.map((e) => (
-          <div key={e.text} onClick={() => handleSetActivePage(e.text)}>
-            <Link to={e.to}>
-              <div
-                className={`flex flex-col justify-center text-[2rem] ${dynamicColor.iconHover} ${pathname === e.to ? dynamicColor.iconSelected : dynamicColor.icon} transition-all duration-300`}
-              >
-                {/*looks like I may been getting this ready to be for the larger size screen? <div className="hidden">{e.text}</div> */}
-                <div className="flex justify-center"> {<e.icon />}</div>
-                <div className="flex select-none justify-center pt-1 text-base">
-                  {e.text}
-                </div>
+    // <nav className="">
+    <nav
+      className={`flex justify-around ${dynamicColor.bg} py-2 transition-all duration-300`}
+    >
+      {navLinks.map((e) => (
+        <div key={e.text} onClick={() => handleSetActivePage(e.text)}>
+          <Link to={e.to}>
+            <div
+              className={`flex flex-col justify-center text-[2rem] ${dynamicColor.iconHover} ${pathname === e.to ? dynamicColor.iconSelected : dynamicColor.icon} transition-all duration-300`}
+            >
+              {/*looks like I may been getting this ready to be for the larger size screen? <div className="hidden">{e.text}</div> */}
+              <div className="flex justify-center"> {<e.icon />}</div>
+              <div className="flex select-none justify-center pt-1 text-base">
+                {e.text}
               </div>
-            </Link>
-          </div>
-        ))}
-      </div>
+            </div>
+          </Link>
+        </div>
+      ))}
     </nav>
+    // </nav>
   );
 }
 

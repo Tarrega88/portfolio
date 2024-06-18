@@ -8,15 +8,20 @@ export default function AppLayout() {
   const dynamicColor = useDynamicColor();
 
   return (
+    // <div
+    //   className={`flex min-h-dvh flex-col ${dynamicColor.text} ${dynamicColor.bg} relative overflow-x-clip transition-all duration-1000`}
+    // >
     <div
-      className={`flex min-h-dvh flex-col ${dynamicColor.text} ${dynamicColor.bg} relative overflow-x-clip transition-all duration-1000`}
+      className={`flex h-dvh flex-col ${dynamicColor.text} ${dynamicColor.bg} relative overflow-x-clip transition-all duration-300`}
     >
       <SunAndMoon />
       <LogoTop />
-      <div className="flex-grow px-4">
+      <div
+        className={`flex-grow px-4 ${dynamicColor.bg} transition-all duration-300`}
+      >
         <Outlet />
       </div>
-      <div className="pb-3">
+      <div className="sticky bottom-0 w-full">
         <DynamicNav />
       </div>
     </div>

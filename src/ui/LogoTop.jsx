@@ -6,7 +6,7 @@ function LogoTop() {
 
   return (
     <div
-      className={`${dynamicColor.svg} absolute size-36 text-4xl transition-all duration-1000`}
+      className={`${dynamicColor.svg} absolute size-36 text-4xl transition-all duration-300`}
     >
       <Icon iconChoice="logo2" />
     </div>
