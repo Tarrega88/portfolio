@@ -16,12 +16,15 @@ function ProjectContainer({
   const dynamicColor = useDynamicColor();
 
   return (
-    <div className="pl-2 pt-6">
+    <div className="border-b py-6 pl-2">
       <div className="flex items-center gap-4 pb-4">
         <a href={url}>
           <img src={src} className="w-12" />
         </a>
-        <a href={url} className="text-xl">
+        <a
+          href={url}
+          className={`text-xl ${url ? "underline underline-offset-4" : ""}`}
+        >
           {projectName}
         </a>
       </div>
@@ -40,7 +43,7 @@ function ProjectContainer({
         {showMore ? "Show Less" : "Show More"}
       </div>
       <div
-        className={`${showMore ? "h-72" : "h-0"} mx-3 overflow-hidden rounded-sm transition-all ${dynamicColor.codeBg}`}
+        className={`${showMore ? "h-72" : "h-0"} mx-3 overflow-scroll rounded-sm transition-all ${dynamicColor.codeBg}`}
       >
         {children}
       </div>
