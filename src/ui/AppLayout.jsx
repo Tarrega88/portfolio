@@ -18,9 +18,9 @@ export default function AppLayout() {
       >
         <Outlet />
       </div>
-      <div className="sticky bottom-0 w-full">
-        <DynamicNav />
-      </div>
+      {/* <div className="sticky bottom-0 w-full"> */}
+      <DynamicNav />
+      {/* </div> */}
     </div>
   );
 }
