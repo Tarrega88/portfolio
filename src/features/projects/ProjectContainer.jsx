@@ -12,7 +12,7 @@ function ProjectContainer({
 }) {
   const [showMore, setShowMore] = useState(false);
   const dynamicColor = useDynamicColor();
-
+  console.log(dynamicColor);
   return (
     <div className="border-b py-6 pl-2">
       <div className="flex items-center gap-4 pb-4">
@@ -21,7 +21,7 @@ function ProjectContainer({
         </a>
         <a
           href={url}
-          className={`text-xl ${url ? "underline underline-offset-4" : ""}`}
+          className={`text-xl ${url ? "underline underline-offset-4" : ""} ${dynamicColor.textHover} transition-all duration-300`}
         >
           {projectName}
         </a>
@@ -35,7 +35,7 @@ function ProjectContainer({
         <div className="text-base">YouTube Link</div>
       </a>
       <div
-        className="flex cursor-pointer py-2 pl-4 underline underline-offset-4"
+        className={`flex cursor-pointer py-2 pl-4 underline underline-offset-4 ${dynamicColor.textHover} transition-all duration-300`}
         onClick={() => setShowMore((show) => !show)}
       >
         {showMore ? "Show Less" : "Show More"}

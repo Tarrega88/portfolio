@@ -26,13 +26,11 @@ function Contact() {
 
           <ContactItem
             icon={<IoMdGlobe />}
-            // activeIcon={<HiOutlineMailOpen />}
             text={contactInfo.location}
             copy={false}
           />
           <ContactItem
             icon={<HiOutlineMail />}
-            // activeIcon={<HiOutlineMailOpen />}
             text={contactInfo.email}
             copy={true}
           />
