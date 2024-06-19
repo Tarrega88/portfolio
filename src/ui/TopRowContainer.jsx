@@ -7,7 +7,9 @@ function TopRowContainer({ mainTitle, subTitle }) {
     <div className="flex items-center justify-between pl-2">
       <div className="flex">
         <LogoTop />
-        <TopNav />
+        <div className="hidden sm:block">
+          <TopNav />
+        </div>
       </div>
       <SectionTitle mainTitle={mainTitle} subTitle={subTitle} />
     </div>

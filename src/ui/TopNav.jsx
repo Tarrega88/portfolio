@@ -13,9 +13,6 @@ function TopNav() {
   const dynamicColor = useDynamicColor();
 
   return (
-    // <nav
-    //   className={`flex justify-around ${dynamicColor.bg} sticky bottom-0 h-max w-full py-2 transition-all duration-300 sm:absolute sm:top-0 sm:justify-start sm:gap-48 sm:pl-8 sm:pt-8`}
-    // >
     <nav
       className={`flex justify-around ${dynamicColor.bg} sticky bottom-0 h-max w-full py-2 transition-all duration-300 sm:justify-start sm:gap-24 sm:pl-12`}
     >
