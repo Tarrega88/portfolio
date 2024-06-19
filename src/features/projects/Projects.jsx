@@ -6,9 +6,9 @@ function Projects() {
   return (
     <div className="overflow-auto">
       <TopRowContainer mainTitle="Projects" />
-      <div className="pb-2 pl-2 text-xl">Solo Projects</div>
+      <div className="pb-2 pl-2 text-2xl">Solo Projects</div>
       <SoloProjects />
-      <div className="pb-2 pl-2 pt-6 text-xl">Other Projects</div>
+      <div className="pb-2 pl-2 pt-6 text-2xl">Other Projects</div>
       <OtherProjects />
     </div>
   );

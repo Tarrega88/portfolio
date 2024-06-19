@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import useDynamicColor from "../hooks/useDynamicColor";
 
-function DynamicNav() {
+function TopNav() {
   const dispatch = useDispatch();
   const { pathname } = useLocation();
   const handleSetActivePage = (to) => dispatch(setActivePage(to));
@@ -14,10 +14,10 @@ function DynamicNav() {
 
   return (
     // <nav
-    //   className={`flex justify-around ${dynamicColor.bg} sticky bottom-0 h-max w-full py-2 transition-all duration-300 sm:justify-start sm:gap-24 sm:pl-12`}
+    //   className={`flex justify-around ${dynamicColor.bg} sticky bottom-0 h-max w-full py-2 transition-all duration-300 sm:absolute sm:top-0 sm:justify-start sm:gap-48 sm:pl-8 sm:pt-8`}
     // >
     <nav
-      className={`flex justify-around ${dynamicColor.bg} sticky bottom-0 h-max w-full py-2 transition-all duration-300 sm:hidden`}
+      className={`flex justify-around ${dynamicColor.bg} sticky bottom-0 h-max w-full py-2 transition-all duration-300 sm:justify-start sm:gap-24 sm:pl-12`}
     >
       {navLinks.map((e) => (
         <div key={e.text} onClick={() => handleSetActivePage(e.text)}>
@@ -37,4 +37,4 @@ function DynamicNav() {
   );
 }
 
-export default DynamicNav;
+export default TopNav;

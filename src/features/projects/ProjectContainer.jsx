@@ -43,7 +43,7 @@ function ProjectContainer({
         {showMore ? "Show Less" : "Show More"}
       </div>
       <div
-        className={`${showMore ? "h-72" : "h-0"} mx-3 overflow-scroll rounded-sm transition-all ${dynamicColor.codeBg}`}
+        className={`${showMore ? "h-72" : "h-0"} mx-3 overflow-auto rounded-sm transition-all ${dynamicColor.codeBg}`}
       >
         {children}
       </div>
