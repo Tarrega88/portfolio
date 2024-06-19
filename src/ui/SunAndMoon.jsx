@@ -22,7 +22,7 @@ function SunAndMoon() {
   return (
     <div
       onClick={() => dispatch(setLightMode(oppositeMode))}
-      className={`absolute top-6 cursor-pointer text-lg transition-all ${pathname === "/" ? "pointer-events-none -right-full duration-1000" : "right-5 duration-300"} ${dynamicColor.lightModeHover} z-50 hover:scale-110`}
+      className={`absolute top-6 cursor-pointer text-lg transition-all ${pathname === "/" ? "pointer-events-none -right-full duration-1000" : "right-3 duration-300 sm:right-8 md:right-12"} ${dynamicColor.lightModeHover} z-50 hover:scale-110`}
     >
       {data[lightMode]}
     </div>
