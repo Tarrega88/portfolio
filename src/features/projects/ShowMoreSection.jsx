@@ -1,15 +1,7 @@
-//lists={[{ type: "Libraries", data: ["Redux", "Router"] }]}
-
-function ShowMoreSection({
-  text,
-  writtenIn,
-  lists = [],
-  // images = [],
-}) {
+function ShowMoreSection({ text, writtenIn, lists = [] }) {
   return (
     <div className="p-4">
       <div>Written in {writtenIn}</div>
-      {/* <div className="pl-2 pt-2">Libraries used:</div> */}
       <div>
         {lists.map((e, i) => (
           <div key={i}>
@@ -32,9 +24,6 @@ function ShowMoreSection({
           </div>
         ))}
       </div>
-      {/* {images.map((src, i) => (
-        <img key={i} src={src} className="w-full" />
-      ))} */}
     </div>
   );
 }

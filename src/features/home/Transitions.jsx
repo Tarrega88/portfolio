@@ -15,21 +15,6 @@ function Transitions() {
 
   const dynamicColor = useDynamicColor();
 
-  //These handlePlay functions are completely confusing because of the naming conventions being all over the place. need to fix naming conventions
-
-  // function handlePlayNight(e) {
-  //   if (!videoRefNight.current || !e.target.paused) return;
-  //   dispatch(setLightMode("day"));
-  //   videoRefNight.current.play();
-  // }
-
-  // function handlePlayDay(e) {
-  //   if (!videoRefDay.current || !e.target.paused) return;
-  //   dispatch(setLightMode("night"));
-  //   videoRefDay.current.play();
-  // }
-
-  //might consider moving some of these lines in handlePlayNight and day around so that it succeeds in changing the mode even if there's some video load error
   function handlePlayNight(e) {
     if (!videoRefNight.current) return;
     dispatch(setLightMode("day"));
@@ -75,13 +60,8 @@ function Transitions() {
     videoRefNight.current.currentTime = 0;
   }
 
-  // const transitionDimension =
-  //   "absolute left-1/2 w-max -translate-x-1/2 sm:w-8/12 md:w-6/12 lg:w-5/12 xl:w-4/12 cursor-pointer sm:top-16 rounded-xl sm:rounded-[50px] md:rounded-[100px] top-4";
-  // const transitionDimension =
-  //   "absolute left-1/2 -translate-x-1/2 cursor-pointer sm:top-16 rounded-xl sm:rounded-[50px] md:rounded-[100px] top-4 h-4/5 w-auto";
-
   const transitionDimension =
-    "aspect-square absolute -translate-x-1/2 left-1/2 rounded-xl sm:rounded-[50px] md:rounded-[100px] cursor-pointer w-[90%] sm:w-[550px] md:w-[600px] lg:w-[650px] xl:w-[700px] md:top-12";
+    "aspect-square absolute -translate-x-1/2 left-1/2 rounded-[20px] sm:rounded-[50px] md:rounded-[100px] cursor-pointer w-[90%] sm:w-[550px] md:w-[600px] lg:w-[650px] xl:w-[700px] md:top-16";
 
   return (
     <div

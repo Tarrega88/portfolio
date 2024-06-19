@@ -30,7 +30,7 @@ function Palette() {
       >
         {paletteColors.map((color, i) => (
           <div
-            className={`${showPalette ? "h-[56px] w-[56px] pl-1 pt-1 md:h-20 md:w-20" : "h-0 w-0 text-[0px] md:h-0 md:w-0"} ${bgColors[color]} cursor-pointer select-none transition-all duration-300 hover:scale-105 ${color === colorMode && showPalette ? "border" : ""}`}
+            className={`${showPalette ? "h-[56px] w-[56px] pl-1 pt-1 md:h-20 md:w-20" : "h-0 w-0 text-[0px] md:h-0 md:w-0"} ${bgColors[color]} cursor-pointer select-none text-white transition-all duration-300 hover:scale-105 ${color === colorMode && showPalette ? "border" : ""}`}
             key={i}
             onClick={() => dispatch(setColorMode(color))}
           >

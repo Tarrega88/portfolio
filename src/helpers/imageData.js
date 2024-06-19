@@ -1,7 +1,7 @@
 const media = {
   IMG: {
     night: "./images/static/night.webp",
-    day: "./images/static/recolorTest2.webp",
+    day: "./images/static/day.webp",
     type: "IMG",
   },
   VIDEO: {
@@ -10,7 +10,7 @@ const media = {
     type: "VIDEO",
   },
   CONTACT: {
-    self: "./images/static/self.webp",
+    self: "./images/static/selfHalf.webp",
   },
 };
 
