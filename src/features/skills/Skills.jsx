@@ -231,9 +231,9 @@ function Skills() {
                 </div>
                 <div>
                   <div
-                    className={`pl-9 text-sm ${dynamicColor.subText} sm:pl-12 sm:text-base`}
+                    className={`text-sm ${dynamicColor.subText} sm:pl-12 sm:text-base`}
                   >
-                    <div className="flex gap-2 pb-2 pt-1">
+                    <div className="flex flex-wrap gap-1 pb-2 pt-1">
                       {skill.subsets.map((e, i) => (
                         <div
                           key={e.name}
@@ -248,7 +248,7 @@ function Skills() {
                       ))}
                     </div>
                     <div
-                      className={`justify-center overflow-y-auto text-xs transition-all duration-300 ease-in-out ${dynamicColor.codeBg} ${currentSkill && codeSection === skill.main ? "h-32 p-3 pt-6 sm:h-max" : "h-0 pt-0"} w-full sm:w-10/12 sm:text-base md:w-9/12 lg:w-8/12 xl:w-1/2`}
+                      className={`justify-center overflow-y-auto text-xs transition-all duration-300 ease-in-out ${dynamicColor.codeBg} ${currentSkill && codeSection === skill.main ? "h-32 p-3 pt-6 sm:h-max" : "h-0 pt-0"} w-full sm:w-11/12 sm:text-base`}
                     >
                       {currentSkill && (
                         <CodeBlock

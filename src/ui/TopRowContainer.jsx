@@ -4,8 +4,8 @@ import TopNav from "./TopNav";
 
 function TopRowContainer({ mainTitle, subTitle }) {
   return (
-    <div className="flex items-center justify-between pl-2">
-      <div className="flex">
+    <div className="flex items-center justify-between pb-8 pl-2">
+      <div className="flex items-center">
         <LogoTop />
         <TopNav />
       </div>

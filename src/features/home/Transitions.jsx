@@ -78,10 +78,10 @@ function Transitions() {
   //   "absolute left-1/2 -translate-x-1/2 cursor-pointer sm:top-16 rounded-xl sm:rounded-[50px] md:rounded-[100px] top-4 h-4/5 w-auto";
 
   const transitionDimension =
-    "aspect-square absolute -translate-x-1/2 left-1/2 rounded-xl sm:rounded-[50px] md:rounded-[100px] scale-95 sm:scale-90";
+    "aspect-square absolute -translate-x-1/2 left-1/2 rounded-xl sm:rounded-[50px] md:rounded-[100px] cursor-pointer w-[330px] sm:w-[800px]";
 
   return (
-    <div className="relative select-none">
+    <div className="relative h-max w-full select-none">
       <video
         key={media.VIDEO.night}
         onClick={handlePlayDay}

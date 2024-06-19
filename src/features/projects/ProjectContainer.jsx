@@ -35,7 +35,7 @@ function ProjectContainer({
         <div className="text-base">YouTube Link</div>
       </a>
       <div
-        className="flex py-2 pl-4 underline underline-offset-4"
+        className="flex cursor-pointer py-2 pl-4 underline underline-offset-4"
         onClick={() => setShowMore((show) => !show)}
       >
         {showMore ? "Show Less" : "Show More"}
