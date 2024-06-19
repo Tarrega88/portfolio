@@ -12,7 +12,7 @@ export default function AppLayout() {
     >
       <SunAndMoon />
       <div
-        className={`flex flex-grow overflow-auto px-4 ${dynamicColor.bg} transition-all duration-300`}
+        className={`h-full overflow-auto px-4 ${dynamicColor.bg} transition-all duration-300`}
       >
         <Outlet />
       </div>

@@ -11,13 +11,10 @@ function DynamicNav() {
   const handleSetActivePage = (to) => dispatch(setActivePage(to));
 
   const dynamicColor = useDynamicColor();
-
+  //${dynamicColor.bg}
   return (
-    // <nav
-    //   className={`flex justify-around ${dynamicColor.bg} sticky bottom-0 h-max w-full py-2 transition-all duration-300 sm:justify-start sm:gap-24 sm:pl-12`}
-    // >
     <nav
-      className={`flex justify-around ${dynamicColor.bg} sticky bottom-0 h-max w-full py-2 transition-all duration-300 md:hidden`}
+      className={`sticky bottom-0 flex h-max w-full justify-around ${dynamicColor.bg} bg-opacity-[95%] py-2 transition-all duration-300 md:hidden`}
     >
       {navLinks.map((e) => (
         <div key={e.text} onClick={() => handleSetActivePage(e.text)}>
