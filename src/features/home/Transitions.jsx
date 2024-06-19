@@ -72,11 +72,16 @@ function Transitions() {
     videoRefNight.current.currentTime = 0;
   }
 
+  // const transitionDimension =
+  //   "absolute left-1/2 w-max -translate-x-1/2 sm:w-8/12 md:w-6/12 lg:w-5/12 xl:w-4/12 cursor-pointer sm:top-16 rounded-xl sm:rounded-[50px] md:rounded-[100px] top-4";
+  // const transitionDimension =
+  //   "absolute left-1/2 -translate-x-1/2 cursor-pointer sm:top-16 rounded-xl sm:rounded-[50px] md:rounded-[100px] top-4 h-4/5 w-auto";
+
   const transitionDimension =
-    "absolute left-1/2 w-max -translate-x-1/2 sm:w-8/12 md:w-6/12 lg:w-5/12 xl:w-4/12 cursor-pointer sm:top-16 rounded-[100px]";
+    "aspect-square absolute -translate-x-1/2 left-1/2 rounded-xl sm:rounded-[50px] md:rounded-[100px] scale-95 sm:scale-90";
 
   return (
-    <div className="relative h-full select-none">
+    <div className="relative select-none">
       <video
         key={media.VIDEO.night}
         onClick={handlePlayDay}
@@ -107,7 +112,3 @@ function Transitions() {
 }
 
 export default Transitions;
-
-{
-  /* <Toggle defaultStatus={true} /> */
-}

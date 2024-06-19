@@ -12,7 +12,7 @@ export default function AppLayout() {
     >
       <SunAndMoon />
       <div
-        className={`flex-grow px-4 ${dynamicColor.bg} transition-all duration-300`}
+        className={`flex flex-grow px-4 ${dynamicColor.bg} transition-all duration-300`}
       >
         <Outlet />
       </div>

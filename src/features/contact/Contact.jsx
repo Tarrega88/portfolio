@@ -14,7 +14,7 @@ const contactInfo = {
 
 function Contact() {
   return (
-    <div className="flex flex-col">
+    <div className="flex w-full flex-col">
       <TopRowContainer mainTitle="Contact" />
       <div className="flex flex-col justify-center gap-y-4 pl-2">
         {/* <ContactItem icon={media.CONTACT.self} /> */}
