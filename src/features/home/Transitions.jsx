@@ -74,8 +74,8 @@ function Transitions() {
 
   return (
     <div className="cursor-pointer select-none">
-      <div className="relative h-[100vw]">
-        <div className="absolute">
+      <div className="relative h-full">
+        <div className="absolute sm:w-1/2">
           <video
             key={media.VIDEO.night}
             onClick={handlePlayDay}
@@ -87,7 +87,7 @@ function Transitions() {
           </video>
         </div>
         <div
-          className={`absolute ${visible ? "" : "pointer-events-none opacity-0"}`}
+          className={`absolute ${visible ? "" : "pointer-events-none opacity-0"} sm:w-1/2`}
         >
           <video
             key={media.VIDEO.day}
@@ -101,7 +101,7 @@ function Transitions() {
         </div>
         <div>
           <img
-            className={`absolute ${imgVisible ? "" : "hidden"}`}
+            className={`absolute ${imgVisible ? "" : "hidden"} sm:w-1/2`}
             src={media.IMG[lightMode]}
             onClick={hideImage}
           />
