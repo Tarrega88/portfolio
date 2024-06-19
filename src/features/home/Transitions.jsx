@@ -72,38 +72,42 @@ function Transitions() {
     videoRefNight.current.currentTime = 0;
   }
 
+  const transitionDimension =
+    "absolute left-1/2 w-max -translate-x-1/2 sm:w-8/12 md:w-6/12 lg:w-5/12 xl:w-4/12 cursor-pointer sm:top-16 rounded-[100px]";
+
   return (
-    <div className="cursor-pointer select-none">
-      <div className="relative flex h-dvh max-w-[750px]">
-        <video
-          key={media.VIDEO.night}
-          onClick={handlePlayDay}
-          onEnded={handleDayEnd}
-          onPlaying={() => setVisible(false)}
-          ref={videoRefNight}
-          className="absolute"
-        >
-          <source src={media.VIDEO.night} type="video/mp4" />
-        </video>
-        <video
-          key={media.VIDEO.day}
-          onClick={handlePlayNight}
-          onEnded={handleNightEnd}
-          onPlaying={() => setVisible(true)}
-          ref={videoRefDay}
-          className={`absolute ${visible ? "" : "pointer-events-none opacity-0"} w-max`}
-        >
-          <source src={media.VIDEO.day} type="video/mp4" />
-        </video>
-        <img
-          className={`${imgVisible ? "" : "hidden"} absolute w-max`}
-          src={media.IMG[lightMode]}
-          onClick={hideImage}
-        />
-      </div>
-      {/* <Toggle defaultStatus={true} /> */}
+    <div className="relative h-full select-none">
+      <video
+        key={media.VIDEO.night}
+        onClick={handlePlayDay}
+        onEnded={handleDayEnd}
+        onPlaying={() => setVisible(false)}
+        ref={videoRefNight}
+        className={transitionDimension}
+      >
+        <source src={media.VIDEO.night} type="video/mp4" />
+      </video>
+      <video
+        key={media.VIDEO.day}
+        onClick={handlePlayNight}
+        onEnded={handleNightEnd}
+        onPlaying={() => setVisible(true)}
+        ref={videoRefDay}
+        className={`${visible ? "" : "pointer-events-none opacity-0"} ${transitionDimension}`}
+      >
+        <source src={media.VIDEO.day} type="video/mp4" />
+      </video>
+      <img
+        className={`${imgVisible ? "" : "hidden"} ${transitionDimension}`}
+        src={media.IMG[lightMode]}
+        onClick={hideImage}
+      />
     </div>
   );
 }
 
 export default Transitions;
+
+{
+  /* <Toggle defaultStatus={true} /> */
+}

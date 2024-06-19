@@ -7,7 +7,6 @@ import {
   SiReactrouter,
   SiJavascript,
 } from "react-icons/si";
-import SectionTitle from "../../ui/SectionTitle";
 import CodeBlock from "../../ui/CodeBlock";
 import { useEffect, useState } from "react";
 import useDynamicColor from "../../hooks/useDynamicColor";
@@ -61,7 +60,7 @@ const mySkills = [
 const examples = {
   React: {
     intro:
-      "I am using useState here to determine whether a video element is seen in the homagepage:",
+      "I am using useState here to determine whether a video element is seen in the homepage:",
     example: `
   const [visible, setVisible] = 
   useState(lightMode === "day");
@@ -214,10 +213,8 @@ function Skills() {
       setCurrentSkill(subSkill);
     }
   }
-  /*justify-between in the ul might not be doing anything so I removed it- will check later*/
   return (
-    <div>
-      {/* <SectionTitle mainTitle="Skills" subTitle="" emptySubTitle={true} /> */}
+    <div className="w-full">
       <TopRowContainer mainTitle="Skills" subTitle="" emptySubTitle={true} />
       <div className="mt-6 pl-2">
         <ul className="flex flex-col gap-y-12">
@@ -225,27 +222,33 @@ function Skills() {
             <li key={skill.main}>
               <div>
                 <div className="flex gap-x-2">
-                  <div className="flex items-center pr-1 text-[1.5rem]">
+                  <div className="flex items-center pr-1 text-[1.5rem] sm:text-[1.8rem]">
                     {<skill.icon />}
                   </div>
-                  <div>{skill.main}</div>
+                  <div className="text-base sm:text-lg md:text-xl">
+                    {skill.main}
+                  </div>
                 </div>
                 <div>
-                  <div className={`pl-9 text-sm ${dynamicColor.subText}`}>
-                    {skill.subsets.map((e, i) => (
-                      <span
-                        key={e.name}
-                        onClick={() =>
-                          handleClick(skill.main, e.name, e.example)
-                        }
-                        className={`${dynamicColor.subTextHover} cursor-pointer ${currentSkill === e.name ? dynamicColor.subTextSelected : ""}`}
-                      >
-                        {e.name}
-                        {skill.subsets.length - i > 1 ? ", " : ""}
-                      </span>
-                    ))}
+                  <div
+                    className={`pl-9 text-sm ${dynamicColor.subText} sm:pl-12 sm:text-base`}
+                  >
+                    <div className="flex gap-2 pb-2 pt-1">
+                      {skill.subsets.map((e, i) => (
+                        <div
+                          key={e.name}
+                          onClick={() =>
+                            handleClick(skill.main, e.name, e.example)
+                          }
+                          className={`${dynamicColor.subTextHover} cursor-pointer ${currentSkill === e.name ? dynamicColor.subTextSelected : ""} text-base sm:text-xl`}
+                        >
+                          {e.name}
+                          {skill.subsets.length - i > 1 ? ", " : ""}
+                        </div>
+                      ))}
+                    </div>
                     <div
-                      className={`justify-center overflow-y-auto text-xs transition-all duration-300 ${dynamicColor.codeBg} ${currentSkill && codeSection === skill.main ? "h-32 p-3 pt-6" : "h-0 pt-0"}`}
+                      className={`justify-center overflow-y-auto text-xs transition-all duration-300 ease-in-out ${dynamicColor.codeBg} ${currentSkill && codeSection === skill.main ? "h-32 p-3 pt-6 sm:h-max" : "h-0 pt-0"} w-full sm:w-10/12 sm:text-base md:w-9/12 lg:w-8/12 xl:w-1/2`}
                     >
                       {currentSkill && (
                         <CodeBlock

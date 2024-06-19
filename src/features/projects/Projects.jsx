@@ -4,7 +4,7 @@ import SoloProjects from "./SoloProjects";
 
 function Projects() {
   return (
-    <div className="overflow-auto">
+    <div className="relative h-full overflow-auto">
       <TopRowContainer mainTitle="Projects" />
       <div className="pb-2 pl-2 text-2xl">Solo Projects</div>
       <SoloProjects />

@@ -1,5 +1,3 @@
-//TODO 6/16/2024: going to put in youtube link to this
-
 import { useState } from "react";
 import useDynamicColor from "../../hooks/useDynamicColor";
 import { FaYoutube } from "react-icons/fa";

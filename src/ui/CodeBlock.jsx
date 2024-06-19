@@ -3,9 +3,13 @@ function CodeBlock({ heading, text, intro, icon, current }) {
   const actualText = text.replaceAll(" ", space);
   const textArr = actualText.split("\n");
   return (
-    <code className={`relative ${current ? "" : "text-transparent"}`}>
+    <code
+      className={`relative ${current ? "" : "text-transparent"} text-base sm:text-xl`}
+    >
       <div className="pb-6">
-        <div className="absolute -top-2 right-0 text-lg">{icon}</div>
+        <div className="absolute -top-2 right-0 text-lg sm:text-3xl">
+          {icon}
+        </div>
         <h2 className="absolute -top-2 left-0">{heading}</h2>
       </div>
       <div className="pb-2">{intro}</div>
