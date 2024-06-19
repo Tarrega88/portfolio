@@ -6,7 +6,7 @@ function LogoTop() {
 
   return (
     <div className={`${dynamicColor.svg} transition-all duration-300`}>
-      <Icon iconChoice="croppedInvert" styles="w-24" />
+      <Icon iconChoice="croppedInvert" styles="w-24 sm:w-28 md:w-32 lg:w-48" />
     </div>
   );
 }

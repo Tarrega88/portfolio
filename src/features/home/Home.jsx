@@ -3,7 +3,7 @@ import Transitions from "./Transitions";
 
 function Home() {
   return (
-    <div className="w-full">
+    <div className="h-max w-full">
       <TopRowContainer mainTitle="Michael See" subTitle="Software Developer" />
       <Transitions />
     </div>

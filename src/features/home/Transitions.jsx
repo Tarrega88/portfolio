@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { media } from "../../helpers/imageData";
 import { useDispatch, useSelector } from "react-redux";
 import { setLightMode } from "../../ui/uiSlice";
+import useDynamicColor from "../../hooks/useDynamicColor";
 
 function Transitions() {
   const { lightMode } = useSelector((state) => state.ui);
@@ -11,6 +12,8 @@ function Transitions() {
 
   const videoRefNight = useRef(null);
   const videoRefDay = useRef(null);
+
+  const dynamicColor = useDynamicColor();
 
   //These handlePlay functions are completely confusing because of the naming conventions being all over the place. need to fix naming conventions
 
@@ -78,10 +81,10 @@ function Transitions() {
   //   "absolute left-1/2 -translate-x-1/2 cursor-pointer sm:top-16 rounded-xl sm:rounded-[50px] md:rounded-[100px] top-4 h-4/5 w-auto";
 
   const transitionDimension =
-    "aspect-square absolute -translate-x-1/2 left-1/2 rounded-xl sm:rounded-[50px] md:rounded-[100px] cursor-pointer w-[330px] sm:w-[800px]";
+    "aspect-square absolute -translate-x-1/2 left-1/2 rounded-xl sm:rounded-[50px] md:rounded-[100px] cursor-pointer w-[90%] sm:w-[550px] md:w-[600px] lg:w-[650px] xl:w-[800px] md:top-16";
 
   return (
-    <div className="relative h-max w-full select-none">
+    <div className={`relative h-max w-full select-none ${dynamicColor.bg}`}>
       <video
         key={media.VIDEO.night}
         onClick={handlePlayDay}
