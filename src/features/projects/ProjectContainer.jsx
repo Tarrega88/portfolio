@@ -15,11 +15,13 @@ function ProjectContainer({
   return (
     <div className="border-b py-6 pl-2">
       <div className="flex items-center gap-4 pb-4">
-        <a href={url}>
+        <a href={url} rel="noopener noreferrer" target="_blank">
           <img src={src} className="w-12" />
         </a>
         <a
           href={url}
+          rel="noopener noreferrer"
+          target="_blank"
           className={`text-xl ${url ? "underline underline-offset-4" : ""} ${dynamicColor.textHover} transition-all duration-300`}
         >
           {projectName}
@@ -28,6 +30,8 @@ function ProjectContainer({
       <div className="pl-4">{shortDescription}</div>
       <a
         href={url2}
+        rel="noopener noreferrer"
+        target="_blank"
         className="flex items-center gap-2 pb-2 pl-3 pt-4 text-4xl"
       >
         <FaYoutube />
