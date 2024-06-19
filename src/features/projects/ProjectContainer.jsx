@@ -12,7 +12,6 @@ function ProjectContainer({
 }) {
   const [showMore, setShowMore] = useState(false);
   const dynamicColor = useDynamicColor();
-  console.log(dynamicColor);
   return (
     <div className="border-b py-6 pl-2">
       <div className="flex items-center gap-4 pb-4">
