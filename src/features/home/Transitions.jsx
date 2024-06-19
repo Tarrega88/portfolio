@@ -68,6 +68,7 @@ function Transitions() {
       className={`relative h-max w-full select-none ${dynamicColor.bg} flex flex-col`}
     >
       <video
+        playsInline
         key={media.VIDEO.night}
         onClick={handlePlayDay}
         onEnded={handleDayEnd}
@@ -78,6 +79,7 @@ function Transitions() {
         <source src={media.VIDEO.night} type="video/mp4" />
       </video>
       <video
+        playsInline
         key={media.VIDEO.day}
         onClick={handlePlayNight}
         onEnded={handleNightEnd}
