@@ -16,8 +16,8 @@ function Contact() {
   return (
     <div className="flex w-full flex-col">
       <TopRowContainer mainTitle="Contact" />
-      <div className="flex flex-col justify-evenly gap-x-8 gap-y-4 pl-2 sm:mt-8 sm:flex-row">
-        <div className="flex flex-col justify-center gap-4">
+      <div className="flex flex-col justify-evenly gap-x-8 gap-y-4 pl-2 sm:mt-8 sm:flex-row md:py-16">
+        <div className="flex flex-col justify-center gap-4 md:gap-6">
           <ContactItem
             icon={<RxAvatar />}
             text={contactInfo.name}
@@ -40,7 +40,7 @@ function Contact() {
         <div className="flex flex-col items-center gap-y-4 pt-6">
           <img
             src={media.CONTACT.self}
-            className={`w-[15rem] select-none sm:w-[500px] md:block`}
+            className={`w-[15rem] select-none sm:w-[500px]`}
           />
           <div className="flex flex-col justify-center text-center text-sm italic">
             <div>Pups and Me</div>
