@@ -2,7 +2,6 @@ import { useRef, useState } from "react";
 import { media } from "../../helpers/imageData";
 import { useDispatch, useSelector } from "react-redux";
 import { setLightMode } from "../../ui/uiSlice";
-import Toggle from "../../ui/Toggle";
 
 function Transitions() {
   const { lightMode } = useSelector((state) => state.ui);

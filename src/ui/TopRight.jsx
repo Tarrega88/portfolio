@@ -4,7 +4,7 @@ function TopRight() {
   return (
     <div className="absolute -top-2 right-1 text-4xl">
       {/* // <div className="absolute -top-4 text-4xl"> */}
-      <Icon iconChoice="logo2" styles="fill-zinc-50 size-36" />
+      <Icon iconChoice="croppedInvert" styles="fill-zinc-50 size-36" />
     </div>
   );
 }

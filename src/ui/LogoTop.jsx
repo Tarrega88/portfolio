@@ -5,10 +5,8 @@ function LogoTop() {
   const dynamicColor = useDynamicColor();
 
   return (
-    <div
-      className={`${dynamicColor.svg} absolute size-36 text-4xl transition-all duration-300`}
-    >
-      <Icon iconChoice="logo2" />
+    <div className={`${dynamicColor.svg} transition-all duration-300`}>
+      <Icon iconChoice="croppedInvert" styles="w-24" />
     </div>
   );
 }

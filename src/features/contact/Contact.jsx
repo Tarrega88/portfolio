@@ -1,9 +1,9 @@
-import SectionTitle from "../../ui/SectionTitle";
 import { HiOutlineMail } from "react-icons/hi";
 import ContactItem from "./ContactItem";
 import { media } from "../../helpers/imageData";
 import { RxAvatar } from "react-icons/rx";
 import { IoMdGlobe } from "react-icons/io";
+import TopRowContainer from "../../ui/TopRowContainer";
 
 const contactInfo = {
   name: "Michael See",
@@ -15,7 +15,7 @@ const contactInfo = {
 function Contact() {
   return (
     <div className="flex flex-col">
-      <SectionTitle mainTitle="Contact" emptySubTitle={true} />
+      <TopRowContainer mainTitle="Contact" />
       <div className="flex flex-col justify-center gap-y-4 pl-2">
         {/* <ContactItem icon={media.CONTACT.self} /> */}
         <ContactItem icon={<RxAvatar />} text={contactInfo.name} copy={false} />

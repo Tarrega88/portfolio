@@ -1,4 +1,6 @@
-function SectionTitle({ mainTitle, subTitle, emptySubTitle }) {
+function SectionTitle({ mainTitle, subTitle }) {
+  const emptySubTitle = !subTitle || !subTitle.length;
+
   return (
     <header
       className={`pr-2 ${emptySubTitle ? "pb-[52px] pt-14" : "pb-10 pt-10"} select-none`}

@@ -14,7 +14,7 @@ function DynamicNav() {
 
   return (
     <nav
-      className={`flex justify-around ${dynamicColor.bg} sticky bottom-0 w-full py-2 transition-all duration-300`}
+      className={`flex justify-around ${dynamicColor.bg} sticky bottom-0 h-max w-full py-2 transition-all duration-300 sm:absolute sm:top-0`}
     >
       {navLinks.map((e) => (
         <div key={e.text} onClick={() => handleSetActivePage(e.text)}>

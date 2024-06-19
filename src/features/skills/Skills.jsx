@@ -11,6 +11,7 @@ import SectionTitle from "../../ui/SectionTitle";
 import CodeBlock from "../../ui/CodeBlock";
 import { useEffect, useState } from "react";
 import useDynamicColor from "../../hooks/useDynamicColor";
+import TopRowContainer from "../../ui/TopRowContainer";
 
 const mySkills = [
   {
@@ -216,7 +217,8 @@ function Skills() {
   /*justify-between in the ul might not be doing anything so I removed it- will check later*/
   return (
     <div>
-      <SectionTitle mainTitle="Skills" subTitle="" emptySubTitle={true} />
+      {/* <SectionTitle mainTitle="Skills" subTitle="" emptySubTitle={true} /> */}
+      <TopRowContainer mainTitle="Skills" subTitle="" emptySubTitle={true} />
       <div className="mt-6 pl-2">
         <ul className="flex flex-col gap-y-12">
           {mySkills.map((skill) => (
