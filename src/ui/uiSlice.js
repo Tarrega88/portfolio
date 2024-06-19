@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
-
+//gray, stone, slate, zinc
 const initialState = {
-  colorMode: "zinc",
+  colorMode: localStorage.getItem("colorMode") || "zinc",
   lightMode: localStorage.getItem("lightMode") || "night",
   activePage: "Home",
 };
@@ -18,8 +18,12 @@ const uiSlice = createSlice({
       state.lightMode = action.payload;
       localStorage.setItem("lightMode", action.payload);
     },
+    setColorMode(state, action) {
+      state.colorMode = action.payload;
+      localStorage.setItem("colorMode", action.payload);
+    },
   },
 });
 
-export const { setActivePage, setLightMode } = uiSlice.actions;
+export const { setActivePage, setLightMode, setColorMode } = uiSlice.actions;
 export default uiSlice.reducer;

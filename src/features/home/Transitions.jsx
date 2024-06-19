@@ -84,7 +84,9 @@ function Transitions() {
     "aspect-square absolute -translate-x-1/2 left-1/2 rounded-xl sm:rounded-[50px] md:rounded-[100px] cursor-pointer w-[90%] sm:w-[550px] md:w-[600px] lg:w-[650px] xl:w-[700px] md:top-12";
 
   return (
-    <div className={`relative h-max w-full select-none ${dynamicColor.bg}`}>
+    <div
+      className={`relative h-max w-full select-none ${dynamicColor.bg} flex flex-col`}
+    >
       <video
         key={media.VIDEO.night}
         onClick={handlePlayDay}
