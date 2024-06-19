@@ -11,8 +11,6 @@ const media = {
   },
   CONTACT: {
     self: "./images/static/self.webp",
-    selfQuarter: "./images/static/selfQuarter.webp",
-    selfHalf: "./images/static/selfHalf.webp",
   },
 };
 

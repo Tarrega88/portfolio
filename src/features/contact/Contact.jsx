@@ -16,30 +16,31 @@ function Contact() {
   return (
     <div className="flex w-full flex-col">
       <TopRowContainer mainTitle="Contact" />
-      <div className="flex flex-col justify-center gap-y-4 pl-2">
-        {/* <ContactItem icon={media.CONTACT.self} /> */}
-        <ContactItem icon={<RxAvatar />} text={contactInfo.name} copy={false} />
+      <div className="flex flex-col justify-evenly gap-x-8 gap-y-4 pl-2 sm:mt-8 sm:flex-row">
+        <div className="flex flex-col justify-center gap-4">
+          <ContactItem
+            icon={<RxAvatar />}
+            text={contactInfo.name}
+            copy={false}
+          />
 
-        <ContactItem
-          icon={<IoMdGlobe />}
-          // activeIcon={<HiOutlineMailOpen />}
-          text={contactInfo.location}
-          copy={false}
-        />
-        <ContactItem
-          icon={<HiOutlineMail />}
-          // activeIcon={<HiOutlineMailOpen />}
-          text={contactInfo.email}
-          copy={true}
-        />
+          <ContactItem
+            icon={<IoMdGlobe />}
+            // activeIcon={<HiOutlineMailOpen />}
+            text={contactInfo.location}
+            copy={false}
+          />
+          <ContactItem
+            icon={<HiOutlineMail />}
+            // activeIcon={<HiOutlineMailOpen />}
+            text={contactInfo.email}
+            copy={true}
+          />
+        </div>
         <div className="flex flex-col items-center gap-y-4 pt-6">
           <img
             src={media.CONTACT.self}
-            className={`hidden w-[40rem] select-none lg:block`}
-          />
-          <img
-            src={media.CONTACT.selfHalf}
-            className={`w-64 select-none sm:hidden`}
+            className={`w-[15rem] select-none sm:w-[500px] md:block`}
           />
           <div className="flex flex-col justify-center text-center text-sm italic">
             <div>Pups and Me</div>
