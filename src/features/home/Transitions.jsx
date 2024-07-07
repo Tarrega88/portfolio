@@ -60,12 +60,15 @@ function Transitions() {
     videoRefNight.current.currentTime = 0;
   }
 
+  //original:
+  //md:top-16
+
   const transitionDimension =
-    "aspect-square absolute -translate-x-1/2 left-1/2 rounded-[20px] sm:rounded-[50px] md:rounded-[100px] cursor-pointer w-[90%] sm:w-[550px] md:w-[600px] lg:w-[650px] xl:w-[700px] md:top-16";
+    "aspect-square absolute -translate-x-1/2 left-1/2 rounded-[20px] sm:rounded-[50px] md:rounded-[100px] cursor-pointer w-[90%] sm:w-[550px] md:w-[600px] lg:w-[650px] xl:w-[700px] xl:top-[60%] xl:-translate-y-[60%]";
 
   return (
     <div
-      className={`relative h-max w-full select-none ${dynamicColor.bg} flex flex-col`}
+      className={`w-full select-none ${dynamicColor.bg} flex h-max flex-col`}
     >
       <video
         playsInline

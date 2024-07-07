@@ -26,7 +26,7 @@ function Palette() {
         <IoMdColorPalette />
       </div>
       <div
-        className={`flex flex-row gap-2 md:bottom-8 ${dynamicColor.bg} bg-opacity-65 pr-4 pt-4 md:flex-col md:pl-4`}
+        className={`flex flex-row gap-2 md:bottom-8 ${dynamicColor.bg} bg-opacity-65 pr-4 pt-4 transition-all duration-300 md:flex-col md:pl-4`}
       >
         {paletteColors.map((color, i) => (
           <div
