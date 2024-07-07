@@ -8,11 +8,11 @@ export default function AppLayout() {
 
   return (
     <div
-      className={`flex h-dvh flex-col ${dynamicColor.text} ${dynamicColor.bg} relative overflow-y-auto overflow-x-clip transition-all duration-300`}
+      className={`flex h-dvh flex-col ${dynamicColor.text} ${dynamicColor.bg} relative overflow-x-clip transition-all duration-300`}
     >
       <SunAndMoon />
       <div
-        className={`h-full px-4 ${dynamicColor.bg} transition-all duration-300`}
+        className={`h-full px-4 ${dynamicColor.bg} overflow-auto transition-all duration-300`}
       >
         <Outlet />
       </div>

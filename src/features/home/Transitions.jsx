@@ -60,15 +60,12 @@ function Transitions() {
     videoRefNight.current.currentTime = 0;
   }
 
-  //original:
-  //md:top-16
-
   const transitionDimension =
-    "aspect-square absolute -translate-x-1/2 left-1/2 rounded-[20px] sm:rounded-[50px] md:rounded-[100px] cursor-pointer w-[90%] sm:w-[550px] md:w-[600px] lg:w-[650px] xl:w-[700px] xl:top-[60%] xl:-translate-y-[60%]";
+    "aspect-square absolute -translate-x-1/2 left-1/2 rounded-[20px] sm:rounded-[50px] md:rounded-[100px] cursor-pointer w-[90%] sm:w-[550px] md:w-[600px] lg:w-[650px] xl:w-[700px] lg:top-12 2xl:top-16";
 
   return (
     <div
-      className={`w-full select-none ${dynamicColor.bg} flex h-max flex-col`}
+      className={`relative h-max w-full select-none ${dynamicColor.bg} flex flex-col`}
     >
       <video
         playsInline
