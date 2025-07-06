@@ -1,11 +1,13 @@
 import { useState } from "react";
 import useDynamicColor from "../../hooks/useDynamicColor";
 import { FaYoutube } from "react-icons/fa";
+import { IoLogoGithub } from "react-icons/io";
 
 function ProjectContainer({
   projectName,
-  url,
-  url2,
+  url = "",
+  youtubeUrl = "",
+  githubUrl = "",
   src,
   children,
   shortDescription,
@@ -27,21 +29,36 @@ function ProjectContainer({
           {projectName}
         </a>
       </div>
-      <div className="pl-4">{shortDescription}</div>
-      <a
-        href={url2}
-        rel="noopener noreferrer"
-        target="_blank"
-        className="flex items-center gap-2 pb-2 pl-3 pt-4 text-4xl"
-      >
-        <FaYoutube />
-        <div className="text-base">YouTube Link</div>
-      </a>
+      <div className="pb-4 pl-4">{shortDescription}</div>
+      <div className="flex gap-4">
+        {githubUrl.length > 0 && (
+          <a
+            href={githubUrl}
+            rel="noopener noreferrer"
+            target="_blank"
+            className={`flex items-center gap-2 pb-2 pl-3 text-4xl ${dynamicColor.textHover} transition-all duration-300`}
+          >
+            <IoLogoGithub />
+            <div className="text-base">Github</div>
+          </a>
+        )}
+        {youtubeUrl.length > 0 && (
+          <a
+            href={youtubeUrl}
+            rel="noopener noreferrer"
+            target="_blank"
+            className={`flex items-center gap-2 pb-2 pl-3 text-4xl ${dynamicColor.textHover} transition-all duration-300`}
+          >
+            <FaYoutube />
+            <div className="text-base">YouTube</div>
+          </a>
+        )}
+      </div>
       <div
         className={`flex cursor-pointer py-2 pl-4 underline underline-offset-4 ${dynamicColor.textHover} transition-all duration-300`}
         onClick={() => setShowMore((show) => !show)}
       >
-        {showMore ? "Show Less" : "Show More"}
+        {showMore ? "Less Info" : "More Info"}
       </div>
       <div
         className={`${showMore ? "h-72" : "h-0"} mx-3 overflow-auto rounded-sm transition-all ${dynamicColor.codeBg}`}

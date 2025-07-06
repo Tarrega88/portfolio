@@ -1,5 +1,7 @@
 import { FaReact } from "react-icons/fa";
 import { RiJavascriptLine, RiCss3Line, RiHtml5Line } from "react-icons/ri";
+import { TbBrandCSharp } from "react-icons/tb";
+
 import {
   SiTypescript,
   SiRedux,
@@ -54,6 +56,11 @@ const mySkills = [
       { name: "CSS", hasExample: true },
       { name: "Tailwind", hasExample: true },
     ],
+  },
+  {
+    main: "C#",
+    icon: TbBrandCSharp,
+    subsets: [],
   },
 ];
 

@@ -10,7 +10,7 @@ const media = {
     type: "VIDEO",
   },
   CONTACT: {
-    self: "./images/static/selfHalf.webp",
+    self: "",
   },
 };
 

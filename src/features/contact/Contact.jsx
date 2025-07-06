@@ -9,7 +9,7 @@ const contactInfo = {
   name: "Michael See",
   email: "michaelSeeDev@gmail.com",
   location: "Anchorage, Alaska",
-  selfBlurb: "Pups + Me - Chugach Mountain Range, Anchorage, AK",
+  selfBlurb: "Portrait",
 };
 
 function Contact() {
@@ -35,7 +35,7 @@ function Contact() {
             copy={true}
           />
         </div>
-        <div className="flex flex-col items-center gap-y-4 pt-6">
+        {/* <div className="flex flex-col items-center gap-y-4 pt-6">
           <img
             src={media.CONTACT.self}
             className={`w-[15rem] select-none sm:w-[500px]`}
@@ -44,7 +44,7 @@ function Contact() {
             <div>Pups and Me</div>
             <div className="text-xs">Chugach Mountain Range, Anchorage, AK</div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

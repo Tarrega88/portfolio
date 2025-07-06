@@ -25,7 +25,7 @@ function OtherProjects() {
       <ProjectContainer
         projectName="Town Star"
         src={townStar}
-        shortDescription="A Web3 farming game about resource management."
+        shortDescription="A farming game about resource management."
         url2="https://youtu.be/VQjMD6-833k"
       >
         <ShowMoreSection
@@ -58,11 +58,9 @@ function OtherProjects() {
             },
           ]}
           text={[
-            "This tool was designed to allow the QA team at Gala Games to generate customized tests.",
+            "This tool was designed to allow the QA team to generate customized tests.",
             "It tapped into our database and allowed test creators to rereference key-words, which would then in turn grab all of the descendant data from that key-word.",
             "From there, the test creator could select all, or filter out unnecessary data.",
-            "Here's a simple example: 'Verify that <game> is launchable from <game> homepage.'",
-            "This would grab all of the games from our database and generate tests based off of the game names.",
           ]}
         />
       </ProjectContainer>
