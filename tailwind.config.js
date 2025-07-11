@@ -7,7 +7,7 @@ export default {
         custom: ["Archia", "sans-serif"],
       },
       screens: {
-        "3xl": "1800px"
+        "3xl": "2300px"
       }
     },
   },
