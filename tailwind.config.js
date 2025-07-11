@@ -6,6 +6,9 @@ export default {
       fontFamily: {
         custom: ["Archia", "sans-serif"],
       },
+      screens: {
+        "3xl": "1800px"
+      }
     },
   },
   plugins: [],
