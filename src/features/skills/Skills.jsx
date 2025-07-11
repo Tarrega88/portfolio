@@ -66,8 +66,7 @@ const mySkills = [
 
 const examples = {
   React: {
-    intro:
-      "I am using useState here to determine whether a video element is seen in the homepage:",
+    intro: "",
     example: `
   const [visible, setVisible] = 
   useState(lightMode === "day");
@@ -83,7 +82,7 @@ const examples = {
     icon: <FaReact />,
   },
   "Redux Toolkit": {
-    intro: "...because who doesn't like reducing boilerplate code?",
+    intro: "",
     example: `
   const store = configureStore({
     reducer: {
@@ -93,8 +92,7 @@ const examples = {
     icon: <SiRedux />,
   },
   "React Router": {
-    intro:
-      "In the interest of keeping the example short, this is only a small portion of the App file:",
+    intro: "",
     example: `const router = createBrowserRouter([
     {
       path: "/",
@@ -111,8 +109,7 @@ const examples = {
     icon: <SiReactrouter />,
   },
   TypeScript: {
-    intro:
-      "I used JavaScript on this site, but TypeScript's ability to catch type errors before they become a problem is great, especially on anything larger than a solo project.",
+    intro: "",
     example: `
     interface TVShow {
     title: string;
@@ -122,8 +119,7 @@ const examples = {
     icon: <SiTypescript />,
   },
   Redux: {
-    intro:
-      "I used Redux's useSelector and useDispatch here to control the display mode and animation on the home page:",
+    intro: "",
     example: `
   const dispatch = useDispatch();
   const { lightMode } = 
@@ -143,8 +139,7 @@ const examples = {
     icon: <SiRedux />,
   },
   JavaScript: {
-    intro:
-      "This example isn't in the site, but it filters evens and odds in one reducer as opposed to using two filter functions:",
+    intro: "",
     example: `
   const evensAndOdds = (arr) =>
   arr.reduce(
@@ -162,8 +157,7 @@ const examples = {
     icon: <SiJavascript />,
   },
   HTML: {
-    intro:
-      "This is JSX with classNames removed for legibility, not pure HTML, but this is similar to how I have my main titles set up:",
+    intro: "",
     example: `
 function SectionTitle(
 { mainTitle, subTitle, emptySubTitle }) {
@@ -177,14 +171,12 @@ function SectionTitle(
     icon: <RiHtml5Line />,
   },
   Tailwind: {
-    intro:
-      "This example pulls from the same area as the HTML example, showing the positioning of the main titles in mobile mode:",
+    intro: "",
     example: `<h1 className="flex justify-end text-3xl uppercase">{mainTitle}</h1>`,
     icon: <SiTailwindcss />,
   },
   CSS: {
-    intro:
-      "This example is not part of the site but I wanted to show some pure CSS:",
+    intro: "",
     example: `
     .button {
       width: 92px;
