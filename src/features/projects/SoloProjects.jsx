@@ -13,7 +13,6 @@ function SoloProjects() {
         projectName="Quote Creator"
         src={electronIcon}
         shortDescription="An Electron app I created for a labor contractor that wanted a quick, simple way to generate quotes for his customers"
-        url="https://github.com/Tarrega88/quote-creator"
         githubUrl="https://github.com/Tarrega88/quote-creator"
         youtubeUrl="https://youtu.be/OZHxZq4Yamw"
       >

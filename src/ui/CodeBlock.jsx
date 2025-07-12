@@ -6,13 +6,7 @@ function CodeBlock({ heading, text, intro, icon, current }) {
     <code
       className={`relative ${current ? "" : "text-transparent"} text-base sm:text-xl`}
     >
-      {/* <div className="pb-6">
-        <div className="absolute -top-2 right-0 text-lg sm:text-3xl">
-          {icon}
-        </div>
-        <h2 className="absolute -top-2 left-0">{heading}</h2>
-      </div> */}
-      <div className="flex justify-between px-6 py-2">
+      <div className="flex justify-between px-6 pt-6">
         <h2 className="">{heading}</h2>
         <div className="text-lg sm:text-3xl">{icon}</div>
       </div>

@@ -11,7 +11,7 @@ function OtherProjects() {
         projectName="Winter Theme Music"
         src={musicIcon}
         shortDescription="A piece of music I wrote for the winter themed update in the game Town Star in 2022."
-        url2="https://www.youtube.com/watch?v=2nUxZY7yYcg"
+        youtubeUrl="https://www.youtube.com/watch?v=2nUxZY7yYcg"
       >
         <ShowMoreSection
           writtenIn="Reaper"
@@ -26,7 +26,7 @@ function OtherProjects() {
         projectName="Town Star"
         src={townStar}
         shortDescription="A farming game about resource management."
-        url2="https://youtu.be/VQjMD6-833k"
+        youtubeUrl="https://youtu.be/VQjMD6-833k"
       >
         <ShowMoreSection
           writtenIn="JavaScript/PlayCanvas"
@@ -47,7 +47,7 @@ function OtherProjects() {
         projectName="QA Test Creator"
         src={tooljetIcon}
         shortDescription="A test creation tool created inside of ToolJet."
-        url2="https://www.youtube.com/watch?v=1fTYJwWKmIo"
+        youtubeUrl="https://www.youtube.com/watch?v=1fTYJwWKmIo"
       >
         <ShowMoreSection
           writtenIn="JavaScript / Tooljet"

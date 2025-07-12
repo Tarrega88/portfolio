@@ -16,21 +16,28 @@ function ProjectContainer({
   const dynamicColor = useDynamicColor();
   return (
     <div className="border-b py-6 pl-2">
-      <div className="flex items-center gap-4 pb-4">
-        <a href={url} rel="noopener noreferrer" target="_blank">
+      {url.length > 0 ? (
+        <div className="flex items-center gap-4 pb-6">
+          <a href={url} rel="noopener noreferrer" target="_blank">
+            <img src={src} className="w-12" />
+          </a>
+          <a
+            href={url}
+            rel="noopener noreferrer"
+            target="_blank"
+            className={`text-xl underline underline-offset-4 ${dynamicColor.textHover} transition-all duration-300`}
+          >
+            {projectName}
+          </a>
+        </div>
+      ) : (
+        <div className="flex items-center gap-4 pb-6">
           <img src={src} className="w-12" />
-        </a>
-        <a
-          href={url}
-          rel="noopener noreferrer"
-          target="_blank"
-          className={`text-xl ${url ? "underline underline-offset-4" : ""} ${dynamicColor.textHover} transition-all duration-300`}
-        >
-          {projectName}
-        </a>
-      </div>
+          <div className={`text-xl ${dynamicColor.text}`}>{projectName}</div>
+        </div>
+      )}
       <div className="pb-4 pl-4">{shortDescription}</div>
-      <div className="flex gap-4">
+      <div className="flex gap-4 py-2">
         {githubUrl.length > 0 && (
           <a
             href={githubUrl}
