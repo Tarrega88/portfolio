@@ -61,7 +61,7 @@ function Transitions() {
   }
 
   const transitionDimension =
-    "aspect-square absolute -translate-x-1/2 left-1/2 rounded-[20px] sm:rounded-[50px] md:rounded-[100px] cursor-pointer w-[90%] sm:w-[550px] md:w-[600px] lg:top-12 2xl:top-6 3xl:w-[700px] 3xl:top-28";
+    "aspect-square absolute -translate-x-1/2 left-1/2 rounded-[20px] sm:rounded-[50px] md:rounded-[100px] cursor-pointer w-[90%] sm:w-[550px] md:w-[600px] xl:w-[500px] 2xl:w-[600px] lg:top-12 xl:top-4 3xl:w-[700px] 3xl:top-28";
 
   return (
     <div
