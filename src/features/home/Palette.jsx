@@ -26,7 +26,8 @@ function Palette() {
         <IoMdColorPalette />
       </div>
       <div
-        className={`flex flex-row gap-2 md:bottom-8 ${dynamicColor.bg} bg-opacity-65 pr-4 pt-4 transition-all duration-300 md:flex-col md:pl-4`}
+        onMouseLeave={() => setShowPalette(false)}
+        className={`flex flex-row gap-2 md:bottom-8 ${dynamicColor.bg} bg-opacity-0 pr-4 pt-4 transition-all duration-300 md:flex-col md:pl-4`}
       >
         {paletteColors.map((color, i) => (
           <div
@@ -37,7 +38,6 @@ function Palette() {
             {color}
           </div>
         ))}
-        {/* } */}
         <div
           className={`cursor-pointer text-[3.5rem] ${dynamicColor.icon} ${dynamicColor.iconHover} hidden transition-all duration-300 md:block`}
           onClick={() => setShowPalette((show) => !show)}
