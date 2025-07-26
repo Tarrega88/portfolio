@@ -2,24 +2,28 @@ import { FaReact } from "react-icons/fa";
 import { RiJavascriptLine, RiCss3Line, RiHtml5Line } from "react-icons/ri";
 import { TbBrandCSharp } from "react-icons/tb";
 
-import {
-  SiTypescript,
-  SiRedux,
-  SiTailwindcss,
-  SiReactrouter,
-  SiJavascript,
-} from "react-icons/si";
-import CodeBlock from "../../ui/CodeBlock";
-import { useEffect, useState } from "react";
+// import {
+//   SiTypescript,
+//   SiRedux,
+//   SiTailwindcss,
+//   SiReactrouter,
+//   SiJavascript,
+// } from "react-icons/si";
+// import CodeBlock from "../../ui/CodeBlock";
+import { useState } from "react";
 import useDynamicColor from "../../hooks/useDynamicColor";
 import TopRowContainer from "../../ui/TopRowContainer";
 
+//Update 7/26/2025:
+//Removing codeblocks here - trying to decide whether to add in some examples of projects but that feels like it's doubling up on the Projects section.
+//To add in linked projects, I'd need to probably restructure how the CodeBlock component works
 const mySkills = [
   {
     main: "React",
     icon: FaReact,
     subsets: [
       { name: "React", hasExample: true },
+      { name: "NextJS", hasExample: true },
       {
         name: "Redux",
         hasExample: true,
@@ -64,137 +68,129 @@ const mySkills = [
   },
 ];
 
-const examples = {
-  React: {
-    intro: "",
-    example: `
-  const [visible, setVisible] = 
-  useState(lightMode === "day");
+// const summaries = {
+//   React: {
+//     intro: "",
+//     projectsBuilt: [],
+//     example: `
 
-    <video
-    key={media.VIDEO.day}
-    onClick={handlePlayNight}
-    onEnded={handleNightEnd}
-    onPlaying={() => setVisible(true)}
-    ref={videoRefDay}>
-...
-  `,
-    icon: <FaReact />,
-  },
-  "Redux Toolkit": {
-    intro: "",
-    example: `
-  const store = configureStore({
-    reducer: {
-      ui: uiReducer,
-    },
-  });`,
-    icon: <SiRedux />,
-  },
-  "React Router": {
-    intro: "",
-    example: `const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <AppLayout />,
-      errorElement: <ErrorPage />,
-      children: [
-        {
-          index: true,
-          element: <Home />,
-        },
-      ],
-    },
-  ]);`,
-    icon: <SiReactrouter />,
-  },
-  TypeScript: {
-    intro: "",
-    example: `
-    interface TVShow {
-    title: string;
-    numEpisodes: number;
-    episodeDuration: number;
-  }`,
-    icon: <SiTypescript />,
-  },
-  Redux: {
-    intro: "",
-    example: `
-  const dispatch = useDispatch();
-  const { lightMode } = 
-  useSelector((state) => state.ui);
+//   `,
+//     icon: <FaReact />,
+//   },
+//   "Redux Toolkit": {
+//     intro: "",
+//     example: `
+//   const store = configureStore({
+//     reducer: {
+//       ui: uiReducer,
+//     },
+//   });`,
+//     icon: <SiRedux />,
+//   },
+//   "React Router": {
+//     intro: "",
+//     example: `const router = createBrowserRouter([
+//     {
+//       path: "/",
+//       element: <AppLayout />,
+//       errorElement: <ErrorPage />,
+//       children: [
+//         {
+//           index: true,
+//           element: <Home />,
+//         },
+//       ],
+//     },
+//   ]);`,
+//     icon: <SiReactrouter />,
+//   },
+//   TypeScript: {
+//     intro: "",
+//     example: `
+//     interface TVShow {
+//     title: string;
+//     numEpisodes: number;
+//     episodeDuration: number;
+//   }`,
+//     icon: <SiTypescript />,
+//   },
+//   Redux: {
+//     intro: "",
+//     example: `
+//   const dispatch = useDispatch();
+//   const { lightMode } =
+//   useSelector((state) => state.ui);
 
-  function hideImage() {
-    if (lightMode === "night") {
-      dispatch(setLightMode("day"));
-      videoRefNight.current.play();
-    } else if (lightMode === "day") {
-      dispatch(setLightMode("night"));
-      videoRefDay.current.play();
-    }
-    setImgVisible(false);
-  }
-`,
-    icon: <SiRedux />,
-  },
-  JavaScript: {
-    intro: "",
-    example: `
-  const evensAndOdds = (arr) =>
-  arr.reduce(
-    (a, b) => {
-      b % 2 === 0 ? a.evens.push(b) :
-      a.odds.push(b);
-      return a;
-    },
-    {
-      evens: [],
-      odds: [],
-    },
-  );
-`,
-    icon: <SiJavascript />,
-  },
-  HTML: {
-    intro: "",
-    example: `
-function SectionTitle(
-{ mainTitle, subTitle, emptySubTitle }) {
-  return (
-    <header>
-      <h1>{mainTitle}</h1>
-      <h2>{subTitle}</h2>
-    </header>
-  )
-}`,
-    icon: <RiHtml5Line />,
-  },
-  Tailwind: {
-    intro: "",
-    example: `<h1 className="flex justify-end text-3xl uppercase">{mainTitle}</h1>`,
-    icon: <SiTailwindcss />,
-  },
-  CSS: {
-    intro: "",
-    example: `
-    .button {
-      width: 92px;
-      height: 36px;
-      background-color: #212121;
-      cursor: pointer;
-      color: #ddd;
-      font-size: 1.5rem;
-      transition: all 0.25s;
-    }
-    
-    .button:hover {
-      color: #ccc;
-      background-color: #555;
-    }`,
-    icon: <RiCss3Line />,
-  },
-};
+//   function hideImage() {
+//     if (lightMode === "night") {
+//       dispatch(setLightMode("day"));
+//       videoRefNight.current.play();
+//     } else if (lightMode === "day") {
+//       dispatch(setLightMode("night"));
+//       videoRefDay.current.play();
+//     }
+//     setImgVisible(false);
+//   }
+// `,
+//     icon: <SiRedux />,
+//   },
+//   JavaScript: {
+//     intro: "",
+//     example: `
+//   const evensAndOdds = (arr) =>
+//   arr.reduce(
+//     (a, b) => {
+//       b % 2 === 0 ? a.evens.push(b) :
+//       a.odds.push(b);
+//       return a;
+//     },
+//     {
+//       evens: [],
+//       odds: [],
+//     },
+//   );
+// `,
+//     icon: <SiJavascript />,
+//   },
+//   HTML: {
+//     intro: "",
+//     example: `
+// function SectionTitle(
+// { mainTitle, subTitle, emptySubTitle }) {
+//   return (
+//     <header>
+//       <h1>{mainTitle}</h1>
+//       <h2>{subTitle}</h2>
+//     </header>
+//   )
+// }`,
+//     icon: <RiHtml5Line />,
+//   },
+//   Tailwind: {
+//     intro: "",
+//     example: `<h1 className="flex justify-end text-3xl uppercase">{mainTitle}</h1>`,
+//     icon: <SiTailwindcss />,
+//   },
+//   CSS: {
+//     intro: "",
+//     example: `
+//     .button {
+//       width: 92px;
+//       height: 36px;
+//       background-color: #212121;
+//       cursor: pointer;
+//       color: #ddd;
+//       font-size: 1.5rem;
+//       transition: all 0.25s;
+//     }
+
+//     .button:hover {
+//       color: #ccc;
+//       background-color: #555;
+//     }`,
+//     icon: <RiCss3Line />,
+//   },
+// };
 
 function Skills() {
   const dynamicColor = useDynamicColor();
@@ -202,7 +198,7 @@ function Skills() {
   const [codeSection, setCodeSection] = useState("React");
   const [currentSkill, setCurrentSkill] = useState("");
 
-  useEffect(() => setCurrentSkill("React"), []);
+  // useEffect(() => setCurrentSkill("React"), []);
 
   function handleClick(mainSkill, subSkill) {
     if (currentSkill === subSkill) {
@@ -239,26 +235,26 @@ function Skills() {
                           onClick={() =>
                             handleClick(skill.main, e.name, e.example)
                           }
-                          className={`${dynamicColor.subTextHover} cursor-pointer ${currentSkill === e.name ? dynamicColor.subTextSelected : ""} text-base sm:text-xl`}
+                          className={`text-base sm:text-xl`}
                         >
                           {e.name}
                           {skill.subsets.length - i > 1 ? ", " : ""}
                         </div>
                       ))}
                     </div>
-                    <div
+                    {/* <div
                       className={`justify-center overflow-y-auto text-xs transition-all duration-300 ease-in-out ${dynamicColor.codeBg} ${currentSkill && codeSection === skill.main ? "h-32 p-3 pt-6 sm:h-max" : "h-0 pt-0"} w-full sm:w-11/12 sm:text-base`}
                     >
                       {currentSkill && (
                         <CodeBlock
                           heading={currentSkill}
-                          intro={examples[currentSkill].intro}
-                          text={examples[currentSkill].example}
-                          icon={examples[currentSkill].icon}
+                          intro={summaries[currentSkill].intro}
+                          // text={summaries[currentSkill].example}
+                          icon={summaries[currentSkill].icon}
                           current={currentSkill && codeSection === skill.main}
                         />
                       )}
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

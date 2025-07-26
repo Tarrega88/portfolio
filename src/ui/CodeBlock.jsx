@@ -1,7 +1,7 @@
 function CodeBlock({ heading, text, intro, icon, current }) {
-  const space = "\xa0";
-  const actualText = text.replaceAll(" ", space);
-  const textArr = actualText.split("\n");
+  // const space = "\xa0";
+  // const actualText = text.replaceAll(" ", space);
+  // const textArr = actualText.split("\n");
   return (
     <code
       className={`relative ${current ? "" : "text-transparent"} text-base sm:text-xl`}
@@ -11,9 +11,9 @@ function CodeBlock({ heading, text, intro, icon, current }) {
         <div className="text-lg sm:text-3xl">{icon}</div>
       </div>
       <div className="pb-2">{intro}</div>
-      {textArr.map((line, i) => (
+      {/* {textArr.map((line, i) => (
         <div key={i}>{line}</div>
-      ))}
+      ))} */}
       <div className="absolute right-1/2 top-1/2 -translate-y-1/2 translate-x-1/2 text-[12rem] opacity-5">
         {icon}
       </div>

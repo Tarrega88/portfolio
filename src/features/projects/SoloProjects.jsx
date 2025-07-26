@@ -36,7 +36,7 @@ function SoloProjects() {
           writtenIn="JavaScript with React"
           lists={[{ type: "Libraries", data: ["Redux", "Recharts"] }]}
           text={[
-            "The Oblivion Difficulty Calculator is a tool I put together because I noticed a lot of people wanting to tweak the difficulty on their game. I threw this together quickly around the game's release as a way to help and also practice my skillset.",
+            "The Oblivion Difficulty Calculator is a tool I designed because I noticed a lot of people wanting to tweak the difficulty on their game. I created this soon after the game's release as a way to help players and modders, and also practice my skillset.",
           ]}
         />
       </ProjectContainer>
