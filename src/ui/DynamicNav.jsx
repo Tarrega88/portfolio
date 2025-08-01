@@ -20,11 +20,13 @@ function DynamicNav() {
         <div key={e.text} onClick={() => handleSetActivePage(e.text)}>
           <Link to={e.to}>
             <div
-              className={`flex flex-col justify-center text-[2rem] ${dynamicColor.iconHover} ${pathname === e.to ? dynamicColor.iconSelected : dynamicColor.icon} transition-all duration-300`}
+              className={`flex flex-col justify-center text-[2.1rem] ${dynamicColor.iconHover} ${pathname === e.to ? dynamicColor.iconSelected : dynamicColor.icon} transition-all duration-300`}
             >
-              <div className="flex justify-center"> {<e.icon />}</div>
-              <div className="flex select-none justify-center pt-1 text-base">
-                {e.text}
+              <div className="relative flex justify-center pb-12">
+                {<e.icon />}
+                <div className="absolute top-10 select-none pt-1 text-base">
+                  {e.text}
+                </div>
               </div>
             </div>
           </Link>
