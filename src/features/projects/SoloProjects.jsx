@@ -5,10 +5,31 @@ import hobaIcon from "./images/hoba_icon.png";
 import oblivIcon from "./images/oblivTransparent.png";
 import electronIcon from "./images/electronTransparent.png";
 import squareLogo from "./images/squareLogo.svg";
+import modularResumeLogo from "./images/logoFilled768.png";
 
 function SoloProjects() {
   return (
     <div>
+      <ProjectContainer
+        projectName="Modular Resume"
+        url="https://modularresume.com/"
+        src={modularResumeLogo}
+        shortDescription="A web application built in React that enables the user to create resumes"
+        githubUrl="https://github.com/Tarrega88/modular-resume-2"
+      >
+        <ShowMoreSection
+          writtenIn="TypeScript with React"
+          lists={[
+            { type: "Libraries", data: ["Redux", "Router", "Sonner", "Dexie"] },
+          ]}
+          text={[
+            "Modular Resume allows the user to create resumes, and it automatically saves each section into the browser's indexed db.",
+            "This allows the user to edit multiple resumes at once, or bring sections of one resume to another very quickly.",
+            "Some of the choices I made were based on making sure the resume output would be legible to ATS (applicant tracking systems), such as the absolutely positioned elements being positioned not in what would appear to be well-suited relative containers. Relative positioning messes with how PDFs are read, so some odd choice had to be made occasionally.",
+            "That said, I met my goal of building the most user-friendly application I possibly could at this point in time, while also providing a legitimately powerful tool.",
+          ]}
+        />
+      </ProjectContainer>
       <ProjectContainer
         projectName="Quote Creator"
         src={electronIcon}
